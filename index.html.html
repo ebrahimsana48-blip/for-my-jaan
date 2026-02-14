@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Favorite Person ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;1,700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-pink: #D8BFD8;
+            --deep-purple: #6A1DAD;
+            --soft-pink: #F3E5F5;
+            --dark-text: #4A148C;
+            --tape-color: rgba(216, 191, 216, 0.6);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--soft-pink);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        #decoration-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 99;
+        }
+
+        .heart {
+            position: absolute;
+            color: var(--primary-pink);
+            font-size: 15px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(106, 13, 173, 0.6), rgba(216, 191, 216, 0.7)), 
+                        url('main_cover.jpg') center/cover no-repeat; /* Ensure main_cover.jpg is in the folder */
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* --- MEMORY SECTIONS --- */
+        .container {
+            padding: 20px 10px;
+        }
+
+        .memory {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s ease-out;
+        }
+
+        .memory.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .memory-images {
+            display: flex;
+            flex-wrap: wrap; /* Wraps images nicely on small screens */
+            padding: 20px 10px;
+            gap: 10px;
+            justify-content: center;
+            background: #fdfbfd;
+        }
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        /* Tape effect */
+        .image-wrapper::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 15px;
+            background: var(--tape-color);
+            z-index: 10;
+        }
+
+        .memory-images img {
+            width: 140px; /* Smaller for mobile */
+            height: 140px;
+            object-fit: cover;
+            border: 5px solid white;
+            border-bottom: 20px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .memory-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .memory-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--deep-purple);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .memory-content p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--primary-pink);
+            color: white;
+        }
+
+        footer h2 { font-family: 'Dancing Script', cursive; font-size: 2.2rem; }
+    </style>
+</head>
+<body>
+
+    <div id="decoration-container"></div>
+
+    <header class="hero">
+        <h1>To [My Jaan]</h1>
+        <p>A collection of our favorite moments</p>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.8; letter-spacing: 2px;">SCROLL DOWN</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="memory">
+            <div class="memory-images">
+                <div class="image-wrapper"><img src="1000405756.jpg" alt="Memory 1"></div>
+                <div class="image-wrapper"><img src="1000405755.jpg" alt="Memory 2"></div>
+            </div>
+            <div class="memory-content">
+                <h2>The Day We Met</h2>
+                <p>The day I met you felt like everything in my life had quietly been leading me to that exact moment. When I first saw you, it was like the world finally made sense and like I had found my light, my peace, my happiness all at once.
+You were everything I had ever hoped for and more. The way I felt holding your hand, kissing your cheek, sharing that first kiss… it was electric. It woke something in me. I felt alive in a way I never had before.
+From that moment, I knew in the calmest, surest way that you were someone I wanted in my life forever.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-images">
+                <div class="image-wrapper"><img src="1000405748.jpg" alt="Memory 3"></div>
+                <div class="image-wrapper"><img src="1000405757.jpg" alt="Memory 4"></div>
+                <div class="image-wrapper"><img src="1000406305.jpg" alt="Memory 5"></div>
+            </div>
+            <div class="memory-content">
+                <h2>Our First Trip</h2>
+                <p>I can’t choose just one special memory with you, because every moment we shared became special simply because you were there.
+It didn’t matter if we were out somewhere beautiful or just sitting at home doing absolutely nothing, being next to you turned ordinary moments into something unforgettable. You were the magic in every trip, every supper, every quiet day.
+It was never about where we were.
+It was about who I was with.
+And with you by my side, every moment felt like it mattered.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-images">
+                <div class="image-wrapper"><img src="1000405759.jpg" alt="Memory 6"></div>
+                <div class="image-wrapper"><img src="1000406309.jpg" alt="Memory 7"></div>
+            </div>
+            <div class="memory-content">
+                <h2>My Favorite Thing</h2>
+                <p>How do I choose one favorite thing about you when loving you has never been about just one thing?
+I love your smile, your eyes, the way your hair falls when you’re relaxed. I love the way you get excited over the smallest plans, the way you cuddle into me, the way you play with my hair without even thinking. I love how you don’t just “go with the flow”, you create it. You plan, you care, you try. You don’t give up easily.
+But more than all of that, I love the way you love. No one has ever loved me the way you did with intention, with effort, with depth.
+On our best days and even on our hardest ones, there has never been a version of you that I didn’t love. And that’s why I can’t choose just one thing… because my favorite thing about you is simply you..</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h2>Happy Valentine's Day</h2>
+        <p>This isn’t just a chapter to me jaan, it’s a lifetime I still see with you. I don’t just cherish what we’ve had, I believe in what we’re meant to have.
+Here’s to forever with you taybah, the love of my life, today and always. ❤️</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">From Siddi</p>
+    </footer>
+
+    <script>
+        // Heart animation
+        function createHeart() {
+            const container = document.getElementById('decoration-container');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            container.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 600);
+
+        // Scroll animation logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.memory').forEach(m => observer.observe(m));
+    </script>
+</body>
+</html>
